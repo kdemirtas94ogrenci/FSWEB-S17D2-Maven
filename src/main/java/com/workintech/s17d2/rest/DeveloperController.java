@@ -19,6 +19,7 @@ public class DeveloperController {
     private final Taxable taxable;
     public  Map<Integer, Developer> developers;
 
+
     public Map<Integer, Developer> getDevelopers() {
         return developers;
     }
@@ -30,6 +31,9 @@ public class DeveloperController {
     @PostConstruct
     public void init() {
         developers = new HashMap<>();
+        developers.put(1, new JuniorDeveloper(1, "Emir", 15000.0));
+        developers.put(2, new MidDeveloper(2, "Erim", 20000.0));
+        developers.put(3, new SeniorDeveloper(3, "Kanat", 25000.0));
 
     }
 
